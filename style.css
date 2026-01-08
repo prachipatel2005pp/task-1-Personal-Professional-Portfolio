@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:#1e1e2f;
+    z-index:1000;
+}
+
+nav .logo{
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:2px;
+    background:#ffd700;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.4s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Home */
+.home{
+    height:100vh;
+    padding-top:80px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:#fff;
+}
+
+.home h1{
+    font-size:40px;
+    animation:slideDown 1s ease;
+}
+
+.home span{
+    color:#ffd700;
+}
+
+.home p{
+    margin-top:15px;
+    font-size:18px;
+    animation:fadeIn 2s ease;
+}
+
+.home button{
+    margin-top:30px;
+    padding:12px 30px;
+    border:none;
+    background:#fff;
+    color:#333;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.4s;
+    animation:slideUp 1.5s ease;
+}
+
+.home button:hover{
+    background:#ffd700;
+}
+
+/* Sections */
+section{
+    padding:80px 60px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+/* Skills */
+.skill-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.skill-box div{
+    background:#fff;
+    margin:12px;
+    padding:15px 30px;
+    border-radius:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.skill-box div:hover{
+    transform:scale(1.1);
+    background:#667eea;
+    color:#fff;
+}
+
+/* Projects */
+.projects{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#fff;
+    width:260px;
+    margin:20px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Contact */
+form{
+    max-width:420px;
+    margin:auto;
+}
+
+form input, form textarea{
+    width:100%;
+    margin:12px 0;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+form button{
+    padding:12px 25px;
+    background:#667eea;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+form button:hover{
+    background:#764ba2;
+}
+
+/* Footer */
+footer{
+    background:#1e1e2f;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+}
+
+/* Animations */
+@keyframes slideDown{
+    from{transform:translateY(-50px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes slideUp{
+    from{transform:translateY(50px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
